@@ -15,8 +15,8 @@ public class PoliController {
     }
 
     // Create
-    public void insertPoli(String namaPoli, String alamatPoli) {
-        poliModel.addPoli(new PoliEntity(namaPoli, alamatPoli));
+    public void insertPoli(int poli,String namaPoli, String alamatPoli) {
+        poliModel.addPoli(new PoliEntity(poli,namaPoli, alamatPoli));
     }
 
     // View

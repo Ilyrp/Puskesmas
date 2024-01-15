@@ -8,36 +8,21 @@ import Entity.PasienEntity;
 import Entity.PoliEntity;
 import ModelGson.GsonModel;
 
-public class PasienModel {
+public class AntrianModel {
     ArrayList<PasienEntity> listPasien;
     GsonModel<PasienEntity> modelGsonPasien;
     PoliModel poliModel;
 
-    
-    public PasienModel(PoliModel poliModel) {
+
+    public AntrianModel(PoliModel poliModel) {
         this.listPasien = new ArrayList<PasienEntity>();
-        this.modelGsonPasien = new GsonModel<>("Database/DatabasePasien.json");
+        this.modelGsonPasien = new GsonModel<>("Database/DatabaseAntrian.json");
         this.poliModel = poliModel;
         loadData();
     }
 
-    public void addPasien(PasienEntity pasien) {
-        listPasien.add(pasien);
-        commitData();
-    }
-
     public ArrayList<PasienEntity> getAllPasien() {
         return listPasien;
-    }
-
-    // nanti buat cetak struck
-    public PasienEntity searchPasien(String namaPasien) {
-        for (PasienEntity pasien : listPasien) {
-            if (pasien.getNamaPasien().equalsIgnoreCase(namaPasien)) {
-                return pasien;
-            }
-        }
-        return null;
     }
 
     public int ambilAntrian(String namaPoli) {

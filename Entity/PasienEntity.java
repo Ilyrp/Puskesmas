@@ -3,11 +3,11 @@ package Entity;
 public class PasienEntity {
     private String nama;
     private String kelamin;
-    private int nik;
+    private String nik;
     private String alamat;
     private String bpjs;  
 
-    public PasienEntity(String nama, String kelamin, int nik, String alamat, String bpjs) {
+    public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs) {
         this.nama = nama;
         this.kelamin = kelamin;
         this.nik = nik;
@@ -27,10 +27,10 @@ public class PasienEntity {
     public void setKelamin(String kelamin){
         this.kelamin = kelamin;
     }
-    public int getNik(){
+    public String getNik(){
         return nik;
     }
-    public void setNik(int nik){
+    public void setNik(String nik){
         this.nik = nik;
     }  
     public String getAlamat(){

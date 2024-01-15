@@ -1,40 +1,21 @@
 [
   {
-    "namaPoli": "Tahu",
-    "alamatPoli": "jalan",
+    "antrian": 0,
+    "namaPoli": "Sehat Selalu",
+    "alamatPoli": "Jln.marga dinoyo",
     "listDokter": [
       {
-        "namaDokter": "budi",
-        "spesialis": "sss"
-      },
-      {
-        "namaDokter": "joko",
-        "spesialis": "gigi"
-      },
-      {
-        "namaDokter": "kk",
-        "spesialis": "kkk",
-        "hariKerja": "sabtu",
-        "jamKerja": "11.11"
-      },
-      {
-        "namaDokter": "aaaa",
+        "namaDokter": "Ilyasa",
         "spesialis": "mata",
         "hariKerja": "senin",
-        "jamKerja": "11.11"
-      },
-      {
-        "namaDokter": "qq",
-        "spesialis": "qq",
-        "hariKerja": "qq",
-        "jamKerja": "qq"
-      },
-      {
-        "namaDokter": "mm",
-        "spesialis": "mm",
-        "hariKerja": "mm",
-        "jamKerja": "mm"
+        "jamKerja": "10.00-16.00"
       }
     ]
+  },
+  {
+    "antrian": 4,
+    "namaPoli": "Mawar",
+    "alamatPoli": "jalan margamulya",
+    "listDokter": []
   }
 ]

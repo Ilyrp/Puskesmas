@@ -3,14 +3,22 @@ package Entity;
 import java.util.ArrayList;
 
 public class PoliEntity {
+    private int antrian;
     private String namaPoli;
     private String alamatPoli;
     public ArrayList<Dokter> listDokter;
 
-    public PoliEntity(String namaPoli, String alamatPoli) {
+    public PoliEntity(int antrian,String namaPoli, String alamatPoli) {
+        this.antrian = antrian;
         this.namaPoli = namaPoli;
         this.alamatPoli = alamatPoli;
         this.listDokter = new ArrayList<>(); // Inisialisasi listDokter biar bikin arraylist baru
+    }
+    public void setNomorAntrian(int antrian){
+        this.antrian = antrian;
+    }
+    public int getNomorAntrian(){ 
+        return antrian;
     }
 
     public String getNamaPoli() {

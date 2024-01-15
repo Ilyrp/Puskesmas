@@ -1,12 +1,8 @@
 package View;
 
 import java.util.Scanner;
-
-import javax.xml.crypto.Data;
-
 import Controller.PoliController;
 import Entity.PoliEntity;
-import Entity.PoliEntity.Dokter;
 
 public class AdminView {
     PoliController poliController;
@@ -20,25 +16,27 @@ public class AdminView {
         int pilih;
         do {
             System.out.println("\n\t\tMenu Administrador");
-            System.out.println("\t1. Tambah Poli");
-            System.out.println("\t2. Tambah Jadwal Praktek");
-            System.out.println("\t3. Update Poli");
-            System.out.println("\t4. Update Jadwal Praktek");
-            System.out.println("\t5. Hapus Poli");
-            System.out.println("\t6. Hapus Jadwal Praktek");
-            System.out.println("\t7. Lihat Data Poli");
-            System.out.println("\t8. Cetak Struk");
-            System.out.println("\t9. Logout");
+            System.out.println("1. Tambah Poli");
+            System.out.println("2. Tambah Jadwal Praktek");
+            System.out.println("3. Update Poli");
+            System.out.println("4. Update Jadwal Praktek");
+            System.out.println("5. Hapus Poli");
+            System.out.println("6. Hapus Jadwal Praktek");
+            System.out.println("7. Lihat Data Poli");
+            System.out.println("8. Cetak Struk");
+            System.out.println("9. Logout");
             System.out.print("Masukkan Pilihan : ");
             pilih = input.nextInt();
 
             switch (pilih) {
                 case 1:
+                    input.nextLine();
                     System.out.println("Masukkan Nama Poli : ");
                     String poli = input.nextLine();
                     System.out.println("Masukkan Alamat Poli : ");
                     String alamat = input.nextLine();
-                    poliController.insertPoli(poli, alamat);
+                    int antrian = 0;
+                    poliController.insertPoli(antrian, poli, alamat);
                     break;
                 case 2:
                     input.nextLine();
@@ -84,6 +82,7 @@ public class AdminView {
                 case 7:
                     System.out.println("- Menampilkan Data Poli -");
                     for (PoliEntity polilist : poliController.viewAllPoli()) {
+                        System.out.println("antrian : " + polilist.getNomorAntrian());
                         System.out.println("Nama Poli: " + polilist.getNamaPoli());
                         System.out.println("Alamat Poli: " + polilist.getAlamatPoli());
                         System.out.println("==============================");

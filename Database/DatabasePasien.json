@@ -2,21 +2,21 @@
   {
     "nama": "Ilyasa",
     "kelamin": "Laki laki",
-    "nik": 1234,
+    "nik": "1234",
     "alamat": "lamongan",
     "bpjs": "1234"
   },
   {
     "nama": "Budi",
     "kelamin": "lk",
-    "nik": 1234,
+    "nik": "1234",
     "alamat": "aaa",
     "bpjs": "1234"
   },
   {
     "nama": "joko",
     "kelamin": "lk",
-    "nik": 11111,
+    "nik": "11111",
     "alamat": "",
     "bpjs": ""
   }

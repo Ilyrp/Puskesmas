@@ -10,6 +10,7 @@ import ModelGson.GsonModel;
 
 public class PoliModel {
     ArrayList<PoliEntity> listPoli;
+    PoliEntity poliEntity;
     GsonModel<PoliEntity> modelGsonPoli;
 
     public PoliModel(){
@@ -54,7 +55,7 @@ public class PoliModel {
         }
         return dokter;
     }
-
+    
     
     public void loadData(){
         listPoli = modelGsonPoli.readFromFile(new TypeToken<ArrayList<PoliEntity>>()
