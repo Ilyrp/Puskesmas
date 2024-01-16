@@ -1,11 +1,15 @@
 package Entity;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public class PasienEntity {
     private String nama;
     private String kelamin;
     private String nik;
     private String alamat;
     private String bpjs;  
+    // ArrayList <Antrian> antrian;
 
     public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs) {
         this.nama = nama;
@@ -13,6 +17,7 @@ public class PasienEntity {
         this.nik = nik;
         this.alamat = alamat;
         this.bpjs = bpjs;
+        // this.antrian = new ArrayList<>(); 
     }
 
     public String getNamaPasien() {
@@ -45,4 +50,21 @@ public class PasienEntity {
     public void setBpjs(String bpjs){
         this.bpjs = bpjs;
     }
+
+
+    
+
+    // public class Antrian{
+        
+    //     LocalDateTime time = LocalDateTime.now();
+
+    //     public Antrian(LocalDateTime time){
+    //         this.time = time;
+    //     }
+
+    //     public LocalDateTime getTime(){
+    //         return time;
+    //     }
+// 
+    // }
 }

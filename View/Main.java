@@ -1,10 +1,6 @@
 package View;
 
-
-
 import java.util.Scanner;
-
-import Controller.AntrianController;
 import Controller.LoginController;
 import Controller.PasienController;
 import Controller.PoliController;
@@ -18,9 +14,8 @@ public class Main {
         PasienModel pasienModel = new PasienModel(poliModel);
         PoliController poliController = new PoliController(poliModel);
         AdminView adminView = new AdminView(poliController);
-        AntrianController antrianController = new AntrianController(pasienModel);
-        PasienController pasienController = new PasienController(pasienModel);
-        PasienView pasienView = new PasienView(poliController, pasienController, antrianController);
+        PasienController pasienController = new PasienController(pasienModel);;
+        PasienView pasienView = new PasienView(poliController, pasienController);
         LoginController loginController = new LoginController(adminView, pasienView);
 
         Scanner input = new Scanner(System.in);
@@ -37,10 +32,10 @@ public class Main {
 
             switch (opsi) {
                 case 1:
+                    input.nextLine();
                     System.out.print("Masukkan NIK: ");
                     String nik = input.nextLine();
                     System.out.print("Masukkan Nama: ");
-                    input.nextLine();
                     String nama = input.nextLine();
                     System.out.print("Masukkan Jenis Kelamin: ");
                     String jenisKelamin = input.nextLine();
@@ -49,7 +44,7 @@ public class Main {
                     pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs);
                     break;
                 case 2:
-                input.nextLine();
+                    input.nextLine();
                     System.out.print("Masukkan NIK atau BPJS: ");
                     nik = input.nextLine();
                     loginController.loginPasien(nik);

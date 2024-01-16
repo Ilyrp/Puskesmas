@@ -15,7 +15,7 @@ public class AdminView {
         Scanner input = new Scanner(System.in);
         int pilih;
         do {
-            System.out.println("\n\t\tMenu Administrador");
+            System.out.println("\tMenu Administrador");
             System.out.println("1. Tambah Poli");
             System.out.println("2. Tambah Jadwal Praktek");
             System.out.println("3. Update Poli");

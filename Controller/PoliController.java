@@ -1,10 +1,7 @@
 package Controller;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-
 import Entity.PoliEntity;
-import Entity.PoliEntity.Dokter;
 import Model.PoliModel;
 
 public class PoliController {

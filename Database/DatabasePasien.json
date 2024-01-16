@@ -1,23 +1,30 @@
 [
   {
-    "nama": "Ilyasa",
-    "kelamin": "Laki laki",
-    "nik": "1234",
-    "alamat": "lamongan",
-    "bpjs": "1234"
-  },
-  {
-    "nama": "Budi",
+    "nama": "",
     "kelamin": "lk",
-    "nik": "1234",
-    "alamat": "aaa",
-    "bpjs": "1234"
-  },
-  {
-    "nama": "joko",
-    "kelamin": "lk",
-    "nik": "11111",
+    "nik": "12345",
     "alamat": "",
-    "bpjs": ""
+    "bpjs": "999"
+  },
+  {
+    "nama": "",
+    "kelamin": "lk",
+    "nik": "456",
+    "alamat": "",
+    "bpjs": "888"
+  },
+  {
+    "nama": "aaa",
+    "kelamin": "aa",
+    "nik": "1111",
+    "alamat": "aaa",
+    "bpjs": "aaa"
+  },
+  {
+    "nama": "IIII",
+    "kelamin": "lklk",
+    "nik": "2113",
+    "alamat": "IIII",
+    "bpjs": "000"
   }
 ]

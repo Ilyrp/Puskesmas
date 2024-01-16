@@ -32,7 +32,7 @@ public class PoliModel {
         listPoli.remove(poli);
     }
 
-    public void updatePoli(String namaGame, PoliEntity poli) {
+    public void updatePoli(String namaPoli, PoliEntity poli) {
         listPoli.contains(poli);
         commitData();
     }

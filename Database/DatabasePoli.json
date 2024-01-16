@@ -1,21 +1,15 @@
 [
   {
-    "antrian": 0,
-    "namaPoli": "Sehat Selalu",
-    "alamatPoli": "Jln.marga dinoyo",
+    "antrian": 4,
+    "namaPoli": "Sehat",
+    "alamatPoli": "Jalan ",
     "listDokter": [
       {
-        "namaDokter": "Ilyasa",
+        "namaDokter": "JOko",
         "spesialis": "mata",
-        "hariKerja": "senin",
-        "jamKerja": "10.00-16.00"
+        "hariKerja": "Senin",
+        "jamKerja": "11.00-16.00"
       }
     ]
-  },
-  {
-    "antrian": 4,
-    "namaPoli": "Mawar",
-    "alamatPoli": "jalan margamulya",
-    "listDokter": []
   }
 ]

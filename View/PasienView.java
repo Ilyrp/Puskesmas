@@ -1,8 +1,6 @@
 package View;
 
 import java.util.Scanner;
-
-import Controller.AntrianController;
 import Controller.PasienController;
 import Controller.PoliController;
 import Entity.PoliEntity;
@@ -10,12 +8,10 @@ import Entity.PoliEntity;
 public class PasienView {
     PoliController poliController;
     PasienController pasienController;
-    AntrianController antrialController;
 
-    public PasienView(PoliController poliController,PasienController pasienController,AntrianController antrianController) {
+    public PasienView(PoliController poliController,PasienController pasienController ) {
         this.poliController = poliController;
         this.pasienController = pasienController;
-        this.antrialController = antrianController;
     }
 
     public void MenuPasien() {

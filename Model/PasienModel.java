@@ -1,10 +1,12 @@
 package Model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
 import Entity.PasienEntity;
+// import Entity.PasienEntity.Antrian;
 import Entity.PoliEntity;
 import ModelGson.GsonModel;
 
@@ -54,6 +56,8 @@ public class PasienModel {
         }
         return nomorAntrian;
     }
+
+
 
     public void loadData() {
         listPasien = modelGsonPasien.readFromFile(new TypeToken<ArrayList<PasienEntity>>() {

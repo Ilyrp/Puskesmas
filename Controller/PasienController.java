@@ -34,7 +34,6 @@ public class PasienController {
 
     public int ambilAntrian(String namaPoli) {
         return pasienModel.ambilAntrian(namaPoli);
-
     }
 
     public PasienEntity searchPasien(String namaPasien) {
