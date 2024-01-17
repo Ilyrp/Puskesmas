@@ -16,10 +16,10 @@ public class PasienModel {
     PoliModel poliModel;
 
     
-    public PasienModel(PoliModel poliModel) {
+    public PasienModel() {
         this.listPasien = new ArrayList<PasienEntity>();
         this.modelGsonPasien = new GsonModel<>("Database/DatabasePasien.json");
-        this.poliModel = poliModel;
+        this.poliModel = new PoliModel();
         loadData();
     }
 

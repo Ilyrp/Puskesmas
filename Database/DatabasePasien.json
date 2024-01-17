@@ -4,15 +4,28 @@
     "kelamin": "q",
     "nik": "1",
     "alamat": "q",
-    "bpjs": "1",
-    "antrian": 0
+    "bpjs": "1"
   },
   {
     "nama": "budi",
     "kelamin": "lklk",
     "nik": "2",
     "alamat": "budi",
-    "bpjs": "2",
-    "antrian": 0
+    "bpjs": "2"
+  },
+  {
+    "nama": "ww",
+    "kelamin": "ww",
+    "nik": "3",
+    "alamat": "ww",
+    "bpjs": "3"
+  },
+  {
+    "nama": "dsa",
+    "kelamin": "dsa",
+    "nik": "sd",
+    "alamat": "sda",
+    "bpjs": "dsa",
+    "listAntrian": []
   }
 ]

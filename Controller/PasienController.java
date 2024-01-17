@@ -9,13 +9,13 @@ import Model.PasienModel;
 public class PasienController {
     private PasienModel pasienModel;
 
-    public PasienController(PasienModel pasienModel) {
-        this.pasienModel = pasienModel;
+    public PasienController() {
+        this.pasienModel = new PasienModel();
     }
 
     // Create
-    public void insertPasien(String nik, String namaPasien, String kelamin, String alamat, String bpjs,int antrian) {
-        pasienModel.addPasien(new PasienEntity(namaPasien, kelamin, nik, alamat, bpjs,antrian));
+    public void insertPasien(String nik, String namaPasien, String kelamin, String alamat, String bpjs) {
+        pasienModel.addPasien(new PasienEntity(namaPasien, kelamin, nik, alamat, bpjs));
     }
 
 

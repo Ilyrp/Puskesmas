@@ -10,13 +10,8 @@ import Model.PoliModel;
 public class Main {
 
     public static void main(String[] args) {
-        PoliModel poliModel = new PoliModel();
-        PasienModel pasienModel = new PasienModel(poliModel);
-        PoliController poliController = new PoliController(poliModel);
-        PasienController pasienController = new PasienController(pasienModel);;
-        PasienView pasienView = new PasienView(poliController, pasienController);
-        AdminView adminView = new AdminView(poliController, pasienController);
-        LoginController loginController = new LoginController(adminView, pasienView);
+        PasienController pasienController = new PasienController();
+        LoginController loginController = new LoginController();
 
         Scanner input = new Scanner(System.in);
 
@@ -41,8 +36,7 @@ public class Main {
                     String jenisKelamin = input.nextLine();
                     System.out.print("Masukkan BPJS (Jika ada): ");
                     String bpjs = input.nextLine();
-                    int antrian = 0;
-                    pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs,antrian);
+                    pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs);
                     break;
                 case 2:
                     input.nextLine();

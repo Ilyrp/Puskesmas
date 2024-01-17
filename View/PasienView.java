@@ -11,9 +11,9 @@ public class PasienView {
     PoliController poliController;
     PasienController pasienController;
 
-    public PasienView(PoliController poliController, PasienController pasienController) {
-        this.poliController = poliController;
-        this.pasienController = pasienController;
+    public PasienView() {
+        this.poliController = new PoliController();
+        this.pasienController = new PasienController();
     }
 
     public void MenuPasien(String nik) {

@@ -7,8 +7,8 @@ import Model.PoliModel;
 public class PoliController {
     private PoliModel poliModel;
 
-    public PoliController(PoliModel poliModel) {
-        this.poliModel = poliModel;
+    public PoliController() {
+        this.poliModel = new PoliModel();
     }
 
     // Create

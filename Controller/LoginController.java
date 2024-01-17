@@ -15,9 +15,9 @@ public class LoginController {
     private PasienView pasienView;
     // private ViewUser viewUser;
 
-    public LoginController(AdminView adminView, PasienView pasienView) {
-        this.adminView = adminView;
-        this.pasienView = pasienView;
+    public LoginController() {
+        this.adminView = new AdminView();
+        this.pasienView = new PasienView();
     }
 
     public void loginAdmin(String username, String password) {

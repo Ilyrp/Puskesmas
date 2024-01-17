@@ -9,16 +9,15 @@ public class PasienEntity {
     private String nik;
     private String alamat;
     private String bpjs;  
-    private int antrian;
-    // ArrayList <Antrian> antrian;
+    ArrayList <PoliEntity> listAntrian;
 
-    public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs,int antrian) {
+    public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs) {
         this.nama = nama;
         this.kelamin = kelamin;
         this.nik = nik;
         this.alamat = alamat;
         this.bpjs = bpjs;
-        this.antrian = antrian;
+        this.listAntrian = new ArrayList<>();
         // this.antrian = new ArrayList<>(); 
     }
 
@@ -52,12 +51,7 @@ public class PasienEntity {
     public void setBpjs(String bpjs){
         this.bpjs = bpjs;
     }
-    public int getAntrian(){
-        return antrian;
-    }
-    public void setAntrian(int antrian){
-        this.antrian = antrian;
-    }
+
 
 
 }

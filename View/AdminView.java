@@ -11,9 +11,9 @@ public class AdminView {
     PoliController poliController;
     PasienController pasienController;
 
-    public AdminView(PoliController poliController, PasienController pasienController) {
-        this.poliController = poliController;
-        this.pasienController = pasienController;
+    public AdminView() {
+        this.poliController = new PoliController();
+        this.pasienController = new PasienController();
     }
 
     public void MenuAdmin() {
@@ -120,7 +120,6 @@ public class AdminView {
                     PasienEntity pasien = pasienController.searchPasien(nik);
                     if (pasien != null) {
                         System.out.println("- Data Pasien -");
-                        System.out.println("Antrian : " + pasien.getAntrian());
                         System.out.println("Nama Pasien : " + pasien.getNamaPasien());
                         System.out.println("Jenis Kelamin : " + pasien.getKelamin());
                         System.out.println("NIK : " + pasien.getNik());
