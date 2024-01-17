@@ -1,42 +1,48 @@
 package Controller;
 
+import java.util.ArrayList;
+
 import Entity.PasienEntity;
+import Entity.PoliEntity;
 import Model.PasienModel;
 
 public class PasienController {
     private PasienModel pasienModel;
 
-    
     public PasienController(PasienModel pasienModel) {
         this.pasienModel = pasienModel;
     }
 
     // Create
-    public void insertPasien(String nik, String namaPasien, String kelamin, String alamat, String bpjs) {
-        pasienModel.addPasien(new PasienEntity(namaPasien, kelamin, nik, alamat, bpjs));
+    public void insertPasien(String nik, String namaPasien, String kelamin, String alamat, String bpjs,int antrian) {
+        pasienModel.addPasien(new PasienEntity(namaPasien, kelamin, nik, alamat, bpjs,antrian));
     }
 
-    // public int ambilAntrian(String namaPoli) {
-    //     ArrayList<PoliEntity> listPoli = poliModel.getAllPoli();
-    //     int nomorAntrian = 0;
 
-    //     for (PoliEntity poli : listPoli) {
-    //         if (poli.getNamaPoli().equalsIgnoreCase(namaPoli)) {
-    //             nomorAntrian = poli.getNomorAntrian();
-    //             poli.setNomorAntrian(nomorAntrian + 1);
-    //             pasienModel.commitData();
-    //             break;
-    //         }
-    //     }
-
-    //     return nomorAntrian;
-    // }
 
     public int ambilAntrian(String namaPoli) {
         return pasienModel.ambilAntrian(namaPoli);
     }
 
-    public PasienEntity searchPasien(String namaPasien) {
-        return pasienModel.searchPasien(namaPasien);
+    // public void updatePasien(String nik, int antrian) {
+    //     PasienEntity pasien = pasienModel.searchPasien(nik);
+    //     if (pasien != null) {
+    //         pasien.setAntrian(antrian);
+    //         pasienModel.updatePasien(nik, pasien);
+    //     } else {
+    //         System.out.println("pasien Tidak Ditemukan!!!");
+    //     }
+    //     pasienModel.commitData();
+    // }
+
+    // buat cetak struk nanti
+    public PasienEntity searchPasien(String nik) {
+        for (PasienEntity pasien : pasienModel.getAllPasien()) {
+            if (pasien.getNik().equalsIgnoreCase(nik) || pasien.getBpjs().equalsIgnoreCase(nik)) {
+                return pasien;
+            }
+        }
+        return null;
     }
+
 }

@@ -1,14 +1,19 @@
 package View;
 
 import java.util.Scanner;
+
+import Controller.PasienController;
 import Controller.PoliController;
+import Entity.PasienEntity;
 import Entity.PoliEntity;
 
 public class AdminView {
     PoliController poliController;
+    PasienController pasienController;
 
-    public AdminView(PoliController poliController) {
+    public AdminView(PoliController poliController, PasienController pasienController) {
         this.poliController = poliController;
+        this.pasienController = pasienController;
     }
 
     public void MenuAdmin() {
@@ -109,7 +114,23 @@ public class AdminView {
 
                     break;
                 case 8:
-                    // Cetak Struk
+                    input.nextLine();
+                    System.out.println("Masukkan NIK atau Bpjs Pasien");
+                    String nik = input.nextLine();
+                    PasienEntity pasien = pasienController.searchPasien(nik);
+                    if (pasien != null) {
+                        System.out.println("- Data Pasien -");
+                        System.out.println("Antrian : " + pasien.getAntrian());
+                        System.out.println("Nama Pasien : " + pasien.getNamaPasien());
+                        System.out.println("Jenis Kelamin : " + pasien.getKelamin());
+                        System.out.println("NIK : " + pasien.getNik());
+                        System.out.println("Alamat : " + pasien.getAlamat());
+                        System.out.println("BPJS : " + pasien.getBpjs());
+                        System.out.println("==============================");
+                    } else {
+                        System.out.println("Data Pasien Tidak Ditemukan!");
+                    }
+
                     break;
                 case 9:
                     // Logout

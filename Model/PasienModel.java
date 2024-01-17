@@ -51,12 +51,17 @@ public class PasienModel {
                 nomorAntrian = poli.getNomorAntrian() + 1;
                 poli.setNomorAntrian(nomorAntrian);
                 poliModel.commitData();
+                
                 break;
             }
         }
         return nomorAntrian;
     }
 
+    // public void updatePasien(String nik, PasienEntity pasien) {
+    //     listPasien.contains(pasien);
+    //     commitData();
+    // }
 
 
     public void loadData() {

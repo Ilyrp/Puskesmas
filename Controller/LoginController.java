@@ -43,7 +43,7 @@ public class LoginController {
         if (listPasien != null) {
             for (PasienEntity pasien : listPasien) {
                 if (pasien.getNik().equalsIgnoreCase(nik)|| pasien.getBpjs().equalsIgnoreCase(nik)) {
-                    pasienView.MenuPasien();
+                    pasienView.MenuPasien(nik);
                     return;
                 }
             }

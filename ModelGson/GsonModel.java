@@ -18,6 +18,7 @@ public class GsonModel<T> extends Abstract<T>{
         return new File(fname).exists();
     }
 
+    
     public void setupFile() {
         try {
             if (!cekFile()) {

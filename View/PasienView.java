@@ -3,42 +3,44 @@ package View;
 import java.util.Scanner;
 import Controller.PasienController;
 import Controller.PoliController;
+import Entity.PasienEntity;
 import Entity.PoliEntity;
 
 public class PasienView {
+    PasienEntity pasienEntity;
     PoliController poliController;
     PasienController pasienController;
 
-    public PasienView(PoliController poliController,PasienController pasienController ) {
+    public PasienView(PoliController poliController, PasienController pasienController) {
         this.poliController = poliController;
         this.pasienController = pasienController;
     }
 
-    public void MenuPasien() {
+    public void MenuPasien(String nik) {
         Scanner input = new Scanner(System.in);
         int opsi;
         do {
             System.out.println("1. Ambil Antrian ");
             System.out.println("2. Lihat Data Poli");
             System.out.println("3. Kembali");
-            System.out.print("Masukkan Pilihan ");
+            System.out.print("Masukkan Pilihan: ");
             opsi = input.nextInt();
 
             switch (opsi) {
                 case 1:
-                System.out.println("Ambil Antrian");
+                    System.out.println("Ambil Antrian");
+                    input.nextLine();
+                    System.out.print("Masukkan Nama Poli: ");
+                    String poliAmbilAntrian = input.nextLine();
 
-                input.nextLine();
-                System.out.print("Masukkan Nama Poli: ");
-                String poliAmbilAntrian = input.nextLine();
-            
-                int nomorAntrian = pasienController.ambilAntrian(poliAmbilAntrian);
-                if (nomorAntrian != -1) {
-                    System.out.println("Anda telah berhasil mengambil antrian dengan nomor: " + nomorAntrian);
-                } else {
-                    System.out.println("Poli tidak ditemukan. Silakan coba lagi.");
-                }
-                break;
+                    int nomorAntrian = pasienController.ambilAntrian(poliAmbilAntrian);
+                    if (nomorAntrian != -1) {
+                        System.out.println("Anda telah berhasil mengambil antrian dengan nomor: " + nomorAntrian);
+                    } else {
+                        System.out.println("Poli tidak ditemukan atau tidak tersedia. Silakan coba lagi.");
+                    }
+                    break;
+
                 case 2:
                     System.out.println("- Menampilkan Data Poli -");
                     for (PoliEntity polilist : poliController.viewAllPoli()) {
@@ -53,7 +55,6 @@ public class PasienView {
                     System.out.print("Masukkan Nama Poli : ");
                     String namaPoli = input.nextLine();
                     PoliEntity dataPoli = poliController.searchPoli(namaPoli);
-
                     if (dataPoli != null) {
                         for (PoliEntity.Dokter dokters : dataPoli.getAllDokter()) {
                             System.out.println("Nama Dokter :" + dokters.getNamaDokter());
@@ -63,13 +64,18 @@ public class PasienView {
                             System.out.println("==============================");
                         }
                     } else {
-                        System.out.println("Poli Tidak Ditemukan!");
+                        System.out.println("Data Tidak Ditemukan!");
                     }
                     poliController.viewAllPoli();
+                    break;
+                case 3:
+                    System.out.println("Kembali ke Menu Utama");
+                    break;
                 default:
+                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
                     break;
             }
-        } while (opsi != 3);
-
+        } while (opsi != 4);
     }
+
 }

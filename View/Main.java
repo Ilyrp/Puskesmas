@@ -13,9 +13,9 @@ public class Main {
         PoliModel poliModel = new PoliModel();
         PasienModel pasienModel = new PasienModel(poliModel);
         PoliController poliController = new PoliController(poliModel);
-        AdminView adminView = new AdminView(poliController);
         PasienController pasienController = new PasienController(pasienModel);;
         PasienView pasienView = new PasienView(poliController, pasienController);
+        AdminView adminView = new AdminView(poliController, pasienController);
         LoginController loginController = new LoginController(adminView, pasienView);
 
         Scanner input = new Scanner(System.in);
@@ -41,7 +41,8 @@ public class Main {
                     String jenisKelamin = input.nextLine();
                     System.out.print("Masukkan BPJS (Jika ada): ");
                     String bpjs = input.nextLine();
-                    pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs);
+                    int antrian = 0;
+                    pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs,antrian);
                     break;
                 case 2:
                     input.nextLine();

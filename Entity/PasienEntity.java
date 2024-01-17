@@ -9,14 +9,16 @@ public class PasienEntity {
     private String nik;
     private String alamat;
     private String bpjs;  
+    private int antrian;
     // ArrayList <Antrian> antrian;
 
-    public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs) {
+    public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs,int antrian) {
         this.nama = nama;
         this.kelamin = kelamin;
         this.nik = nik;
         this.alamat = alamat;
         this.bpjs = bpjs;
+        this.antrian = antrian;
         // this.antrian = new ArrayList<>(); 
     }
 
@@ -50,21 +52,12 @@ public class PasienEntity {
     public void setBpjs(String bpjs){
         this.bpjs = bpjs;
     }
+    public int getAntrian(){
+        return antrian;
+    }
+    public void setAntrian(int antrian){
+        this.antrian = antrian;
+    }
 
 
-    
-
-    // public class Antrian{
-        
-    //     LocalDateTime time = LocalDateTime.now();
-
-    //     public Antrian(LocalDateTime time){
-    //         this.time = time;
-    //     }
-
-    //     public LocalDateTime getTime(){
-    //         return time;
-    //     }
-// 
-    // }
 }

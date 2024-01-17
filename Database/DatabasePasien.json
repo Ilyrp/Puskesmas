@@ -1,30 +1,18 @@
 [
   {
-    "nama": "",
-    "kelamin": "lk",
-    "nik": "12345",
-    "alamat": "",
-    "bpjs": "999"
+    "nama": "q",
+    "kelamin": "q",
+    "nik": "1",
+    "alamat": "q",
+    "bpjs": "1",
+    "antrian": 0
   },
   {
-    "nama": "",
-    "kelamin": "lk",
-    "nik": "456",
-    "alamat": "",
-    "bpjs": "888"
-  },
-  {
-    "nama": "aaa",
-    "kelamin": "aa",
-    "nik": "1111",
-    "alamat": "aaa",
-    "bpjs": "aaa"
-  },
-  {
-    "nama": "IIII",
+    "nama": "budi",
     "kelamin": "lklk",
-    "nik": "2113",
-    "alamat": "IIII",
-    "bpjs": "000"
+    "nik": "2",
+    "alamat": "budi",
+    "bpjs": "2",
+    "antrian": 0
   }
 ]
