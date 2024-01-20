@@ -1,24 +1,18 @@
 package Entity;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-
 public class PasienEntity {
     private String nama;
     private String kelamin;
     private String nik;
     private String alamat;
     private String bpjs;  
-    ArrayList <PoliEntity> listAntrian;
 
     public PasienEntity(String nama, String kelamin, String nik, String alamat, String bpjs) {
         this.nama = nama;
         this.kelamin = kelamin;
         this.nik = nik;
         this.alamat = alamat;
-        this.bpjs = bpjs;
-        this.listAntrian = new ArrayList<>();
-        // this.antrian = new ArrayList<>(); 
+        this.bpjs = bpjs; 
     }
 
     public String getNamaPasien() {

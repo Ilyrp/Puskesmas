@@ -33,9 +33,11 @@ public class PasienView {
                     System.out.print("Masukkan Nama Poli: ");
                     String poliAmbilAntrian = input.nextLine();
 
-                    int nomorAntrian = pasienController.ambilAntrian(poliAmbilAntrian);
+                    pasienEntity = pasienController.searchPasien(nik);
+                    int nomorAntrian = pasienController.ambilAntrian(poliAmbilAntrian, nik);
                     if (nomorAntrian != -1) {
                         System.out.println("Anda telah berhasil mengambil antrian dengan nomor: " + nomorAntrian);
+                        pasienController.addAntrian(poliAmbilAntrian, pasienEntity);
                     } else {
                         System.out.println("Poli tidak ditemukan atau tidak tersedia. Silakan coba lagi.");
                     }
@@ -75,7 +77,7 @@ public class PasienView {
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");
                     break;
             }
-        } while (opsi != 4);
+        } while (opsi != 3);
     }
 
 }

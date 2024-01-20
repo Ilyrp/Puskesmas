@@ -1,9 +1,11 @@
 package View;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Controller.PasienController;
 import Controller.PoliController;
+import Entity.AntrianEntity;
 import Entity.PasienEntity;
 import Entity.PoliEntity;
 
@@ -115,21 +117,27 @@ public class AdminView {
                     break;
                 case 8:
                     input.nextLine();
-                    System.out.println("Masukkan NIK atau Bpjs Pasien");
-                    String nik = input.nextLine();
-                    PasienEntity pasien = pasienController.searchPasien(nik);
-                    if (pasien != null) {
-                        System.out.println("- Data Pasien -");
-                        System.out.println("Nama Pasien : " + pasien.getNamaPasien());
-                        System.out.println("Jenis Kelamin : " + pasien.getKelamin());
-                        System.out.println("NIK : " + pasien.getNik());
-                        System.out.println("Alamat : " + pasien.getAlamat());
-                        System.out.println("BPJS : " + pasien.getBpjs());
-                        System.out.println("==============================");
-                    } else {
-                        System.out.println("Data Pasien Tidak Ditemukan!");
-                    }
+                    System.out.println("Masukkan Nama Poli : ");
+                    namaPoli = input.nextLine();
+                    System.out.println("Masukkan Nomor Antrian : ");
+                    int nomorAntrian = input.nextInt();
+                    AntrianEntity Antrian = pasienController.searchAntrian(nomorAntrian, namaPoli);
 
+                    if (Antrian != null) {
+                        System.out.println("===== Antrian Details =====");
+                        System.out.println("Nomor Antrian: " + Antrian.getAntri());
+                        System.out.println("Nama Poli: " + Antrian.getNamaPoli());
+
+                        ArrayList<PasienEntity> antrianDetails = Antrian.getAntrianDetails();
+                        for (PasienEntity pasien : antrianDetails) {
+                            System.out.println("NIK: " + pasien.getNik());
+                            System.out.println("Nama Pasien: " + pasien.getNamaPasien());
+                            System.out.println("BPJS: " + pasien.getBpjs());
+                            System.out.println("===========================");
+                        }
+                    } else {
+                        System.out.println("Antrian Tidak Ditemukan");
+                    }
                     break;
                 case 9:
                     // Logout
@@ -140,3 +148,4 @@ public class AdminView {
         } while (pilih != 9);
     }
 }
+

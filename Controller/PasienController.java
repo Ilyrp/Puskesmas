@@ -1,16 +1,23 @@
 package Controller;
 
-import java.util.ArrayList;
 
+import Entity.AntrianEntity;
 import Entity.PasienEntity;
 import Entity.PoliEntity;
+import Model.AntrianModel;
 import Model.PasienModel;
+import Model.PoliModel;
 
 public class PasienController {
-    private PasienModel pasienModel;
+   private PasienModel pasienModel;
+    private PoliModel poliModel;
+    AntrianModel antrianModel;
+    PoliEntity poliEntity;
 
     public PasienController() {
         this.pasienModel = new PasienModel();
+        this.poliModel = new PoliModel();
+        this.antrianModel = new AntrianModel();
     }
 
     // Create
@@ -20,20 +27,11 @@ public class PasienController {
 
 
 
-    public int ambilAntrian(String namaPoli) {
+    public int ambilAntrian(String namaPoli, String nik) {
         return pasienModel.ambilAntrian(namaPoli);
     }
 
-    // public void updatePasien(String nik, int antrian) {
-    //     PasienEntity pasien = pasienModel.searchPasien(nik);
-    //     if (pasien != null) {
-    //         pasien.setAntrian(antrian);
-    //         pasienModel.updatePasien(nik, pasien);
-    //     } else {
-    //         System.out.println("pasien Tidak Ditemukan!!!");
-    //     }
-    //     pasienModel.commitData();
-    // }
+
 
     // buat cetak struk nanti
     public PasienEntity searchPasien(String nik) {
@@ -44,5 +42,19 @@ public class PasienController {
         }
         return null;
     }
+
+     public void addAntrian(String namaPoli, PasienEntity pasienEntity){
+        PoliEntity poliEntity = poliModel.searchPoli(namaPoli);
+        if (poliEntity != null) {
+            AntrianEntity antrian = new AntrianEntity(poliEntity.getNomorAntrian()+1, namaPoli);
+            antrian.addPasien(pasienEntity);
+            antrianModel.addAntrian(antrian);
+        }
+    }
+    
+    public AntrianEntity searchAntrian(int nomorAntrian, String namaPoli) {
+        return antrianModel.searchAntrian(nomorAntrian, namaPoli);
+    }
+
 
 }

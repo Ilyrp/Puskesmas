@@ -13,7 +13,6 @@ import View.PasienView;
 public class LoginController {
     private AdminView adminView;
     private PasienView pasienView;
-    // private ViewUser viewUser;
 
     public LoginController() {
         this.adminView = new AdminView();

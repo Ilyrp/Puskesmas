@@ -1,17 +1,20 @@
 package View;
 
 import java.util.Scanner;
+
+import Controller.AdminController;
 import Controller.LoginController;
 import Controller.PasienController;
-import Controller.PoliController;
-import Model.PasienModel;
-import Model.PoliModel;
 
 public class Main {
 
     public static void main(String[] args) {
         PasienController pasienController = new PasienController();
         LoginController loginController = new LoginController();
+        AdminController adminController = new AdminController();
+
+        adminController.insertAdmin("admin", "admin");
+        
 
         Scanner input = new Scanner(System.in);
 
@@ -32,11 +35,13 @@ public class Main {
                     String nik = input.nextLine();
                     System.out.print("Masukkan Nama: ");
                     String nama = input.nextLine();
+                    System.out.print("Masukkan Alamat :");
+                    String alamat = input.nextLine();
                     System.out.print("Masukkan Jenis Kelamin: ");
                     String jenisKelamin = input.nextLine();
                     System.out.print("Masukkan BPJS (Jika ada): ");
                     String bpjs = input.nextLine();
-                    pasienController.insertPasien(nik, nama, jenisKelamin, nama, bpjs);
+                    pasienController.insertPasien(nik, nama, jenisKelamin, alamat, bpjs);
                     break;
                 case 2:
                     input.nextLine();

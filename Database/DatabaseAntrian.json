@@ -1,0 +1,15 @@
+[
+  {
+    "antri": 3,
+    "namaPoli": "sehat",
+    "detailPasien": [
+      {
+        "nama": "q",
+        "kelamin": "q",
+        "nik": "1",
+        "alamat": "q",
+        "bpjs": "1"
+      }
+    ]
+  }
+]

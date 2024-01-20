@@ -6,8 +6,8 @@ import Model.AdminModel;
 public class AdminController {
     private AdminModel modelAdmin;
 
-    public AdminController(AdminModel modelAdmin) {
-        this.modelAdmin = modelAdmin;
+    public AdminController() {
+        this.modelAdmin = new AdminModel();
     }
 
     public void insertAdmin(String username, String password) {

@@ -44,7 +44,7 @@ public class PasienModel {
 
     public int ambilAntrian(String namaPoli) {
         ArrayList<PoliEntity> listPoli = poliModel.getAllPoli();
-        int nomorAntrian = 0;
+        int nomorAntrian = -1;
 
         for (PoliEntity poli : listPoli) {
             if (poli.getNamaPoli().equalsIgnoreCase(namaPoli)) {
