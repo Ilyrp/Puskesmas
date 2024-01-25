@@ -1,7 +1,7 @@
-package Controller;
+package controller;
 
-import Entity.AdminEntity;
-import Model.AdminModel;
+import entity.AdminEntity;
+import model.AdminModel;
 
 public class AdminController {
     private AdminModel modelAdmin;

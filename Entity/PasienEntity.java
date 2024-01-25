@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 public class PasienEntity {
     private String nama;

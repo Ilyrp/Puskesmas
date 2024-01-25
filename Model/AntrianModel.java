@@ -1,9 +1,10 @@
-package Model;
+package model;
 
 import java.util.ArrayList;
 import com.google.gson.reflect.TypeToken;
-import Entity.AntrianEntity;
+
 import ModelGson.GsonModel;
+import entity.AntrianEntity;
 
 public class AntrianModel {
     private ArrayList<AntrianEntity> listAntrian;

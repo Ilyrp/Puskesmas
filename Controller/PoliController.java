@@ -1,8 +1,9 @@
-package Controller;
+package controller;
 
 import java.util.ArrayList;
-import Entity.PoliEntity;
-import Model.PoliModel;
+
+import entity.PoliEntity;
+import model.PoliModel;
 
 public class PoliController {
     private PoliModel poliModel;
@@ -66,7 +67,9 @@ public class PoliController {
     
     
 
+    // buat cari data poli
     public PoliEntity searchPoli(String namaPoli) {
         return poliModel.searchPoli(namaPoli);
     }
+
 }

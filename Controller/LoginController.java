@@ -1,14 +1,14 @@
-package Controller;
+package controller;
 
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
-import Entity.AdminEntity;
-import Entity.PasienEntity;
 import ModelGson.GsonModel;
-import View.AdminView;
-import View.PasienView;
+import entity.AdminEntity;
+import entity.PasienEntity;
+import view.AdminView;
+import view.PasienView;
 
 public class LoginController {
     private AdminView adminView;

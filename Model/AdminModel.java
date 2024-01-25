@@ -1,9 +1,9 @@
-package Model;
+package model;
 
 import java.util.ArrayList;
 
 import ModelGson.GsonModel;
-import Entity.AdminEntity;
+import entity.AdminEntity;
 
 import com.google.gson.reflect.TypeToken;
 public class AdminModel {

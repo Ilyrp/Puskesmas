@@ -1,12 +1,12 @@
-package Model;
+package model;
 
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
-import Entity.PoliEntity;
-import Entity.PoliEntity.Dokter;
 import ModelGson.GsonModel;
+import entity.PoliEntity;
+import entity.PoliEntity.Dokter;
 
 public class PoliModel {
     ArrayList<PoliEntity> listPoli;

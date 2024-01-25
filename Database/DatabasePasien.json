@@ -5,5 +5,12 @@
     "nik": "1",
     "alamat": "q",
     "bpjs": "1"
+  },
+  {
+    "nama": "2",
+    "kelamin": "2",
+    "nik": "2",
+    "alamat": "2",
+    "bpjs": ""
   }
 ]

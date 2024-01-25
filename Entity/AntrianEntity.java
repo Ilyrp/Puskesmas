@@ -1,15 +1,19 @@
-package Entity;
+package entity;
 
 import java.util.ArrayList;
+
+import utility.DateString;
 
 public class AntrianEntity {
     private int antri;
     private String namaPoli;
+    private String tanggal;
     private ArrayList<PasienEntity> detailPasien;
 
     public AntrianEntity(int antri, String namaPoli) {
         this.antri = antri;
         this.namaPoli = namaPoli;
+        this.tanggal = DateString.now();
         this.detailPasien = new ArrayList<>();
     }
 
@@ -21,6 +25,10 @@ public class AntrianEntity {
         return namaPoli;
     }
 
+    public String getTanggal(){
+        return tanggal;
+    }
+
     public ArrayList<PasienEntity> getAntrianDetails() {
         return detailPasien;
     }
@@ -28,4 +36,5 @@ public class AntrianEntity {
     public void addPasien(PasienEntity pasien) {
         detailPasien.add(pasien);
     }
+
 }

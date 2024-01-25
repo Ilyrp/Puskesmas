@@ -1,14 +1,13 @@
-package Model;
+package model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
-import Entity.PasienEntity;
-// import Entity.PasienEntity.Antrian;
-import Entity.PoliEntity;
 import ModelGson.GsonModel;
+import entity.PasienEntity;
+import entity.PoliEntity;
 
 public class PasienModel {
     ArrayList<PasienEntity> listPasien;

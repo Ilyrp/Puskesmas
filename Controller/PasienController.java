@@ -1,15 +1,14 @@
-package Controller;
+package controller;
 
-
-import Entity.AntrianEntity;
-import Entity.PasienEntity;
-import Entity.PoliEntity;
-import Model.AntrianModel;
-import Model.PasienModel;
-import Model.PoliModel;
+import entity.AntrianEntity;
+import entity.PasienEntity;
+import entity.PoliEntity;
+import model.AntrianModel;
+import model.PasienModel;
+import model.PoliModel;
 
 public class PasienController {
-   private PasienModel pasienModel;
+    private PasienModel pasienModel;
     private PoliModel poliModel;
     AntrianModel antrianModel;
     PoliEntity poliEntity;
@@ -25,13 +24,9 @@ public class PasienController {
         pasienModel.addPasien(new PasienEntity(namaPasien, kelamin, nik, alamat, bpjs));
     }
 
-
-
     public int ambilAntrian(String namaPoli, String nik) {
         return pasienModel.ambilAntrian(namaPoli);
     }
-
-
 
     // buat cetak struk nanti
     public PasienEntity searchPasien(String nik) {
@@ -43,18 +38,17 @@ public class PasienController {
         return null;
     }
 
-     public void addAntrian(String namaPoli, PasienEntity pasienEntity){
+    public void addAntrian(String namaPoli, PasienEntity pasienEntity) {
         PoliEntity poliEntity = poliModel.searchPoli(namaPoli);
         if (poliEntity != null) {
-            AntrianEntity antrian = new AntrianEntity(poliEntity.getNomorAntrian()+1, namaPoli);
+            AntrianEntity antrian = new AntrianEntity(poliEntity.getNomorAntrian() + 1, namaPoli);
             antrian.addPasien(pasienEntity);
             antrianModel.addAntrian(antrian);
         }
     }
-    
+
     public AntrianEntity searchAntrian(int nomorAntrian, String namaPoli) {
         return antrianModel.searchAntrian(nomorAntrian, namaPoli);
     }
-
 
 }

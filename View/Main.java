@@ -1,46 +1,44 @@
-package View;
+package view;
 
 import java.util.Scanner;
-
-import Controller.AdminController;
-import Controller.LoginController;
-import Controller.PasienController;
+import controller.LoginController;
+import controller.PasienController;
 
 public class Main {
 
     public static void main(String[] args) {
         PasienController pasienController = new PasienController();
         LoginController loginController = new LoginController();
-        AdminController adminController = new AdminController();
-
-        adminController.insertAdmin("admin", "admin");
-        
 
         Scanner input = new Scanner(System.in);
 
         int opsi;
         do {
-            System.out.println("Menu");
-            System.out.println("1. Input Data Pasien");
-            System.out.println("2. Ambil Antrian");
-            System.out.println("3. Login Admin");
-            System.out.println("4. Keluar");
+            System.out.println("=========================");
+            System.out.println("| \t   Menu\t\t|");
+            System.out.println("| 1. Input Data Pasien\t|");
+            System.out.println("| 2. Ambil Antrian\t|");
+            System.out.println("| 3. Login Admin\t|");
+            System.out.println("| 4. Keluar\t\t|");
+            System.out.println("=========================");
             System.out.print("Masukkan Pilihan: ");
             opsi = input.nextInt();
 
             switch (opsi) {
                 case 1:
                     input.nextLine();
-                    System.out.print("Masukkan NIK: ");
+                    System.out.println("=========================");
+                    System.out.print("Masukkan NIK\t\t: ");
                     String nik = input.nextLine();
-                    System.out.print("Masukkan Nama: ");
+                    System.out.print("Masukkan Nama\t\t: ");
                     String nama = input.nextLine();
-                    System.out.print("Masukkan Alamat :");
+                    System.out.print("Masukkan Alamat\t\t:");
                     String alamat = input.nextLine();
-                    System.out.print("Masukkan Jenis Kelamin: ");
+                    System.out.print("Masukkan Jenis Kelamin\t: ");
                     String jenisKelamin = input.nextLine();
                     System.out.print("Masukkan BPJS (Jika ada): ");
                     String bpjs = input.nextLine();
+                    System.out.println("=========================");
                     pasienController.insertPasien(nik, nama, jenisKelamin, alamat, bpjs);
                     break;
                 case 2:
@@ -51,10 +49,12 @@ public class Main {
                     break;
                 case 3:
                     input.nextLine();
+                    System.out.println("=========================");
                     System.out.print("Masukkan Username: ");
                     String username = input.nextLine();
                     System.out.print("Masukkan Password: ");
                     String password = input.nextLine();
+                    System.out.println("=========================");
                     loginController.loginAdmin(username, password);
                     break;
                 case 4:

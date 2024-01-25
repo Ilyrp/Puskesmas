@@ -1,27 +1,26 @@
-package Entity;
+package entity;
 
-public class AdminEntity {
-    private String username;
-    private String password;
+public class AdminEntity extends Orang{
 
-    public AdminEntity(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public AdminEntity(String username,String password){
+        super(username,password);
     }
 
-    public String getUsername() {
-        return username;
+
+    public String getUsername(){
+        return super.getUsername();
     }
+    
 
     public String getPassword() {
-        return password;
+        return super.getUsername();
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        super.setUsername(username);
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        super.setPassword(password);
     }
 }

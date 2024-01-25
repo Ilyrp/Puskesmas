@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ public class PoliEntity {
         this.antrian = antrian;
         this.namaPoli = namaPoli;
         this.alamatPoli = alamatPoli;
-        this.listDokter = new ArrayList<>(); // Inisialisasi listDokter biar bikin arraylist baru
+        this.listDokter = new ArrayList<>();
     }
     public void setNomorAntrian(int antrian){
         this.antrian = antrian;

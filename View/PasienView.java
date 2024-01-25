@@ -1,10 +1,11 @@
-package View;
+package view;
 
 import java.util.Scanner;
-import Controller.PasienController;
-import Controller.PoliController;
-import Entity.PasienEntity;
-import Entity.PoliEntity;
+
+import entity.PasienEntity;
+import entity.PoliEntity;
+import controller.PasienController;
+import controller.PoliController;
 
 public class PasienView {
     PasienEntity pasienEntity;
@@ -46,7 +47,6 @@ public class PasienView {
                 case 2:
                     System.out.println("- Menampilkan Data Poli -");
                     for (PoliEntity polilist : poliController.viewAllPoli()) {
-                        System.out.println("antrian : " + polilist.getNomorAntrian());
                         System.out.println("Nama Poli: " + polilist.getNamaPoli());
                         System.out.println("Alamat Poli: " + polilist.getAlamatPoli());
                         System.out.println("==============================");
@@ -68,7 +68,6 @@ public class PasienView {
                     } else {
                         System.out.println("Data Tidak Ditemukan!");
                     }
-                    poliController.viewAllPoli();
                     break;
                 case 3:
                     System.out.println("Kembali ke Menu Utama");

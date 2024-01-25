@@ -1,55 +1,44 @@
-package View;
+package view;
+// package View;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
+// import javax.swing.JButton;
+// import javax.swing.JOptionPane;
 
-import javax.swing.JOptionPane;
+// public class MenuGui extends Frame {
 
-public class MenuGui extends JFrame {
+//     private JButton insertData, loginPasien, loginAdmin;
 
-    JButton inserData, loginPasien, loginAdmin;
+//     public MenuGui() {
+//         super("Menu Utama", 800, 500);
+//     }
 
-    public void JavaSwing() {
-        setTitle("lOGIN");
-        setSize(800, 500);
-        setLayout(null);
-        Menu();
-        setVisible(true);
-    }
+//     @Override
+//     protected void component() {
+//         insertData = new JButton("Insert Data");
+//         insertData.setBounds(100, 230, 160, 80);
+//         add(insertData);
 
-    public void Menu() {
+//         loginPasien = new JButton("Login Pasien");
+//         loginPasien.setBounds(300, 230, 160, 80);
+//         add(loginPasien);
 
-        inserData = new JButton("Insert Data");
-        inserData.setBounds(100, 230, 160, 80);
-        add(inserData);
+//         loginAdmin = new JButton("Login Admin");
+//         loginAdmin.setBounds(500, 230, 150, 80);
+//         add(loginAdmin);
 
-        loginPasien = new JButton("Login Pasien");
-        loginPasien.setBounds(300, 230, 160, 80);
-        add(loginPasien);
+//     }
 
-        loginAdmin = new JButton("Login Admin");
-        loginAdmin.setBounds(500, 230, 150, 80);
-        add(loginAdmin);
+//     @Override
+//     protected void event() {
+//         loginAdmin.addActionListener((e) -> {
+//             JOptionPane.showMessageDialog(null, "Selamat Datang", "Login Sukses", JOptionPane.INFORMATION_MESSAGE);
+//             dispose();
+//             new LoginGui().setVisible(true);
+//         });
 
-        loginAdmin.addActionListener((e) -> {
-            JOptionPane.showMessageDialog(null, "Selamat Datang", "Login Sukses",
-                    JOptionPane.INFORMATION_MESSAGE);
-            dispose();
-            new LoginGui().JavaSwing();
-        });
-
-        inserData.addActionListener((e) -> {
-            JOptionPane.showMessageDialog(null, "Masuk data", "Menu Insert Data",
-                    JOptionPane.INFORMATION_MESSAGE);
-            dispose();
-            new insertDataGui().JavaSwing();
-        });
-
-        
-    }
-
-    public static void main(String[] args) {
-        MenuGui Password = new MenuGui();
-        Password.JavaSwing();
-    }
-}
+//         insertData.addActionListener((e) -> {
+//             dispose();
+//             new insertDataGui().JavaSwing();
+//         });
+//     }
+// }
