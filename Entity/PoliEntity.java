@@ -6,7 +6,7 @@ public class PoliEntity {
     private int antrian;
     private String namaPoli;
     private String alamatPoli;
-    public ArrayList<Dokter> listDokter;
+    public ArrayList<DokterEntity> listDokter;
 
     public PoliEntity(int antrian,String namaPoli, String alamatPoli) {
         this.antrian = antrian;
@@ -37,63 +37,11 @@ public class PoliEntity {
         this.alamatPoli = alamatPoli;
     }
 
-    public ArrayList<Dokter> getAllDokter() {
+    public ArrayList<DokterEntity> getAllDokter() {
         return this.listDokter;
-    }
-
-    public void addDokter(String namaDokter, String spesialis, String hariKerja, String jamKerja) {
-        Dokter dokter = new Dokter(namaDokter, spesialis, hariKerja, jamKerja);
-        listDokter.add(dokter);
-    }
     
 
-    public void updateDokterPoli(ArrayList<Dokter> listDokters) {
-        this.listDokter = listDokters;
-    }
+ 
 
-    public static class Dokter {
-        private String namaDokter;
-        private String spesialis;
-        private String hariKerja;
-        private String jamKerja;
-
-        public Dokter(String namaDokter, String spesialis,String hariKerja,String jamKerja) {
-            this.namaDokter = namaDokter;
-            this.spesialis = spesialis;
-            this.hariKerja = hariKerja;
-            this.jamKerja = jamKerja;
-        }
-
-        public String getNamaDokter() {
-            return namaDokter;
-        }
-
-        public String getSpesialis() {
-            return spesialis;
-        }
-
-        public void setNamaDokter(String namaDokter) {
-            this.namaDokter = namaDokter;
-        }
-
-        public void setSpesialis(String spesialis) {
-            this.spesialis = spesialis;
-        }
-
-        public String getHariKerja() {
-            return hariKerja;
-        }
-
-        public void setHariKerja(String hariKerja) {
-            this.hariKerja = hariKerja;
-        }
-
-        public void setJamKerja(String jamKerja){
-            this.jamKerja = jamKerja;
-        }
-
-        public String getJamKerja(){
-            return jamKerja;
-        }
     }
 }

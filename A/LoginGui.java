@@ -1,4 +1,4 @@
-package view;
+package A;
 // package View;
 
 // import java.awt.Color;

@@ -3,8 +3,8 @@ package model;
 import java.util.ArrayList;
 import com.google.gson.reflect.TypeToken;
 
-import ModelGson.GsonModel;
 import entity.AntrianEntity;
+import modelGson.GsonModel;
 
 public class AntrianModel {
     private ArrayList<AntrianEntity> listAntrian;

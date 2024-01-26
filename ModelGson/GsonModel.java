@@ -1,4 +1,4 @@
-package ModelGson;
+package modelGson;
 
 import com.google.gson.*;
 

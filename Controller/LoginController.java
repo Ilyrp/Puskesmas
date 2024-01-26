@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
-import ModelGson.GsonModel;
 import entity.AdminEntity;
 import entity.PasienEntity;
+import modelGson.GsonModel;
 import view.AdminView;
 import view.PasienView;
 

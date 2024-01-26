@@ -1,4 +1,4 @@
-package view;
+package A;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Image;

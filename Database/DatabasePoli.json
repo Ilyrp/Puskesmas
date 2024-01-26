@@ -1,14 +1,14 @@
 [
   {
-    "antrian": 3,
-    "namaPoli": "Sehat",
-    "alamatPoli": "Jalan ",
+    "antrian": 0,
+    "namaPoli": "aa",
+    "alamatPoli": "aa",
     "listDokter": [
       {
-        "namaDokter": "JOko",
-        "spesialis": "mata",
-        "hariKerja": "Senin",
-        "jamKerja": "11.00-16.00"
+        "namaDokter": "ss",
+        "spesialis": "ss",
+        "hariKerja": "vf",
+        "jamKerja": "vf"
       }
     ]
   }

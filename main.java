@@ -1,8 +1,8 @@
-// import View.MenuGui;
+import view.MenuView;
 
-// public class main {
-//     public static void main(String[] args) {
-//         new MenuGui().setVisible(true);
-//     }
-   
-// }
+public class main {
+    public static void main(String[] args) {
+        MenuView menuView = new MenuView();
+        menuView.MainMenu();
+    }
+}

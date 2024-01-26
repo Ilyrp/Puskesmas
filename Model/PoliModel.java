@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
-import ModelGson.GsonModel;
+import entity.DokterEntity;
 import entity.PoliEntity;
-import entity.PoliEntity.Dokter;
+import modelGson.GsonModel;
 
 public class PoliModel {
     ArrayList<PoliEntity> listPoli;
@@ -46,9 +46,9 @@ public class PoliModel {
         return null;
     }
 
-    public Dokter searchDokter (String namaDokter, ArrayList<Dokter> listDokter){
-        Dokter dokter = null;
-        for (Dokter dataDokter : listDokter) {
+    public DokterEntity searchDokter (String namaDokter, ArrayList<DokterEntity> listDokter){
+        DokterEntity dokter = null;
+        for (DokterEntity dataDokter : listDokter) {
             if (dataDokter.getNamaDokter().equalsIgnoreCase(namaDokter)){
                 return dataDokter;
             }

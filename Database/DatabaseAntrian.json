@@ -1,14 +1,15 @@
 [
   {
-    "antri": 3,
-    "namaPoli": "sehat",
+    "antri": 1,
+    "namaPoli": "mawar",
+    "tanggal": "26-01-2024 0:4:38",
     "detailPasien": [
       {
-        "nama": "q",
-        "kelamin": "q",
-        "nik": "1",
-        "alamat": "q",
-        "bpjs": "1"
+        "nama": "ss",
+        "kelamin": "ss",
+        "nik": "2",
+        "alamat": "ss",
+        "bpjs": ""
       }
     ]
   }
