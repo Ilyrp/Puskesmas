@@ -1,14 +1,20 @@
 [
   {
-    "antrian": 0,
+    "antrian": 2,
     "namaPoli": "aa",
     "alamatPoli": "aa",
     "listDokter": [
       {
-        "namaDokter": "ss",
-        "spesialis": "ss",
-        "hariKerja": "vf",
-        "jamKerja": "vf"
+        "namaDokter": "Budi",
+        "spesialis": "mata",
+        "hariKerja": "senin",
+        "jamKerja": "12.00-16.00"
+      },
+      {
+        "namaDokter": "Budi",
+        "spesialis": "mata",
+        "hariKerja": "senin",
+        "jamKerja": "12.00-16.00"
       }
     ]
   }

@@ -33,14 +33,14 @@ public class PasienModel {
     }
 
     // nanti buat cetak struck
-    public PasienEntity searchPasien(String namaPasien) {
-        for (PasienEntity pasien : listPasien) {
-            if (pasien.getNamaPasien().equalsIgnoreCase(namaPasien)) {
-                return pasien;
-            }
-        }
-        return null;
-    }
+    // public PasienEntity searchPasien(String namaPasien) {
+    //     for (PasienEntity pasien : listPasien) {
+    //         if (pasien.getNamaPasien().equalsIgnoreCase(namaPasien)) {
+    //             return pasien;
+    //         }
+    //     }
+    //     return null;
+    // }
 
     public int ambilAntrian(String namaPoli) {
         ArrayList<PoliEntity> listPoli = poliModel.getAllPoli();

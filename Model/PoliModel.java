@@ -25,6 +25,7 @@ public class PoliModel {
     }
 
     public ArrayList<PoliEntity> getAllPoli() {
+        loadData();
         return listPoli;
     }
   

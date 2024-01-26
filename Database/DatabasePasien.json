@@ -12,5 +12,19 @@
     "nik": "2",
     "alamat": "ss",
     "bpjs": ""
+  },
+  {
+    "nama": "1",
+    "kelamin": "1",
+    "nik": "1",
+    "alamat": "1",
+    "bpjs": "1"
+  },
+  {
+    "nama": "Ilyas",
+    "kelamin": "LK",
+    "nik": "12",
+    "alamat": "lmg",
+    "bpjs": "32"
   }
 ]

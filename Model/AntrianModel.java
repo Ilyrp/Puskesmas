@@ -9,6 +9,7 @@ import modelGson.GsonModel;
 public class AntrianModel {
     private ArrayList<AntrianEntity> listAntrian;
     private GsonModel<AntrianEntity> modelGsonAntrian;
+    private PoliModel poliModel = new PoliModel();
 
     public AntrianModel() {
         listAntrian = new ArrayList<>();
@@ -26,6 +27,7 @@ public class AntrianModel {
     }
 
     public AntrianEntity searchAntrian(int nomorAntrian, String namaPoli) {
+        poliModel.loadData();
         for (AntrianEntity antrian : listAntrian) {
             if (antrian.getAntri() == nomorAntrian && antrian.getNamaPoli().equalsIgnoreCase(namaPoli)) {
                 return antrian;

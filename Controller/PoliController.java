@@ -21,6 +21,7 @@ public class PoliController {
 
     // View
     public ArrayList<PoliEntity> viewAllPoli() {
+        // poliModel.loadData();
     return poliModel.getAllPoli();
 }
 

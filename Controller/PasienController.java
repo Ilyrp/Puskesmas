@@ -39,9 +39,10 @@ public class PasienController {
     }
 
     public void addAntrian(String namaPoli, PasienEntity pasienEntity) {
+        poliModel.loadData();
         PoliEntity poliEntity = poliModel.searchPoli(namaPoli);
         if (poliEntity != null) {
-            AntrianEntity antrian = new AntrianEntity(poliEntity.getNomorAntrian() + 1, namaPoli);
+            AntrianEntity antrian = new AntrianEntity(poliEntity.getNomorAntrian(), namaPoli);
             antrian.addPasien(pasienEntity);
             antrianModel.addAntrian(antrian);
         }
