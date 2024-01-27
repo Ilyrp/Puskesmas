@@ -45,7 +45,4 @@ public class PasienEntity {
     public void setBpjs(String bpjs){
         this.bpjs = bpjs;
     }
-
-
-
 }

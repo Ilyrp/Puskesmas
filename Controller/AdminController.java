@@ -11,6 +11,6 @@ public class AdminController {
     }
 
     public void insertAdmin(String username, String password) {
-        modelAdmin.addAdmin(new AdminEntity(username, password));
+        modelAdmin.addAdmin(new AdminEntity("admin", "admin"));
     }
 }

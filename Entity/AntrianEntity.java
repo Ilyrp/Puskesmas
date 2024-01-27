@@ -17,6 +17,11 @@ public class AntrianEntity {
         this.detailPasien = new ArrayList<>();
     }
 
+    public AntrianEntity(String namaPoli,PasienEntity detailPasien){
+        this.namaPoli = namaPoli;
+        this.detailPasien = new ArrayList<>();
+    }
+
     public int getAntri() {
         return antri;
     }

@@ -6,7 +6,7 @@ public class PoliEntity {
     private int antrian;
     private String namaPoli;
     private String alamatPoli;
-    public ArrayList<DokterEntity> listDokter;
+    private ArrayList<DokterEntity> listDokter;
 
     public PoliEntity(int antrian,String namaPoli, String alamatPoli) {
         this.antrian = antrian;

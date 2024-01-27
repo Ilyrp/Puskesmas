@@ -32,16 +32,6 @@ public class PasienModel {
         return listPasien;
     }
 
-    // nanti buat cetak struck
-    // public PasienEntity searchPasien(String namaPasien) {
-    //     for (PasienEntity pasien : listPasien) {
-    //         if (pasien.getNamaPasien().equalsIgnoreCase(namaPasien)) {
-    //             return pasien;
-    //         }
-    //     }
-    //     return null;
-    // }
-
     public int ambilAntrian(String namaPoli) {
         ArrayList<PoliEntity> listPoli = poliModel.getAllPoli();
         int nomorAntrian = -1;
@@ -57,11 +47,6 @@ public class PasienModel {
         }
         return nomorAntrian;
     }
-
-    // public void updatePasien(String nik, PasienEntity pasien) {
-    //     listPasien.contains(pasien);
-    //     commitData();
-    // }
 
 
     public void loadData() {
